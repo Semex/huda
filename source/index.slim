@@ -1,0 +1,17 @@
+doctype html
+html
+  head
+   == partial '_layouts/head.slim'
+  body.absolute style="width: 100%; height: 100%;"
+    script
+      |
+        prefix = ''
+        if (window.location.host !== 'localhost:4567') {
+          if (window.location.host === 'huda.mouten.info')
+            window.location = 'https://moutend.github.io/yesorno/'
+          if (window.location.host === 'moutend.github.io' && window.location.protocol !== 'https:')
+            window.location.protocol = 'https'
+          if (window.location.host === 'moutend.github.io')
+            prefix = '/huda'
+        }
+    == partial '_layouts/body.slim'
