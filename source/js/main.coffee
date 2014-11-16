@@ -28,6 +28,5 @@ $().ready () ->
   app.se.load ["#{prefix}/audio/wrong.wav"], "wrong"
   app.se.load ["#{prefix}/audio/right.wav"], "right"
   app.se.load ["#{prefix}/audio/ok.wav"],    "ok"
-
   new Ready
 
