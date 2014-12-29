@@ -1234,7 +1234,8 @@ class TestQuestion
       null
 
     card = app.cards.getCurrent()
-    card.front_chars = card.front.split('').toString().replace /,/g, ', ... '
+    card.front_chars = ""
+#    card.front_chars = card.front.split('').toString().replace /,/g, ', ... '
     new Speech card.front
     if _vm?
       _vm.card = card
