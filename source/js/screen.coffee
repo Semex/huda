@@ -1459,3 +1459,23 @@ class TestResult
       keys:
         l: next
 
+puts = (message) =>
+  console.log message
+
+window.reset = () =>
+  strage = new Strage
+  cards = window.app.cards.getAll()
+
+  for index, value of cards
+    puts index
+    cards[index].date = 0
+    cards[index].score = 0
+
+  strage.save cards, (error) ->
+    if error?
+      app.se.play 'wrong'
+      return null
+    app.se.play 'ok'
+
+  puts cards
+
