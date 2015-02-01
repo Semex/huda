@@ -1,0 +1,15 @@
+title: blog.mouten.info
+description: Web accessibility and DSP.
+baseurl: ""
+url: "http://blog.mouten.info"
+
+markdown: kramdown
+permalink: pretty
+
+paginate: 10
+paginate_path: /:num
+
+exclude:
+  - "README.md"
+  - "Gemfile"
+  - "vendor"
